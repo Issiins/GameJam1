@@ -17,9 +17,7 @@ namespace Player
         {
             _rb = GetComponent<Rigidbody2D>();
             _grounded = GetComponentInChildren<Grounded>();
-            _inputController.Move.performed += OnMove;
-            _inputController.Move.canceled += OnMove;
-            _inputController.Jump.performed += OnJump;
+            SetActions();
         }
 
         private void OnMove(InputAction.CallbackContext ctx)
@@ -36,6 +34,16 @@ namespace Player
         }
 
         private void OnDisable()
+        {
+            DisableActions();
+        }
+        private void SetActions()
+        {
+            _inputController.Move.performed += OnMove;
+            _inputController.Move.canceled += OnMove;
+            _inputController.Jump.performed += OnJump;
+        }
+        private void DisableActions()
         {
             _inputController.Move.performed -= OnMove;
             _inputController.Move.canceled -= OnMove;
