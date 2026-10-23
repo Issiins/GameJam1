@@ -9,13 +9,14 @@ namespace Player
     {
         [SerializeField] private InputController _inputController;
         [SerializeField] private float _maxSpeed;
-        [SerializeField] private float jumpForce;
-
+        [SerializeField] private float _jumpForce;
+        private Grounded _grounded;
         private Rigidbody2D _rb;
         private Vector2 _direction;
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
+            _grounded = GetComponentInChildren<Grounded>();
             _inputController.Move.performed += OnMove;
             _inputController.Move.canceled += OnMove;
             _inputController.Jump.performed += OnJump;
@@ -29,7 +30,9 @@ namespace Player
 
         private void OnJump(InputAction.CallbackContext ctx)
         {
-            _rb.linearVelocityY = Vector2.up.y * jumpForce;
+            if(_grounded == null ||  !_grounded.IsGrounded())
+                return;
+            _rb.linearVelocityY = Vector2.up.y * _jumpForce;
         }
 
         private void OnDisable()
