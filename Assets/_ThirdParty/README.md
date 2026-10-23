@@ -1,0 +1,1 @@
+﻿# List of third party assets used
