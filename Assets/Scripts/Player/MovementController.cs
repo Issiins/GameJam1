@@ -39,7 +39,6 @@ namespace Player
                 return;
             _rb.linearVelocityY = Vector2.up.y * _jumpForce;
         }
-
         private void OnDisable()
         {
             DisableActions();
