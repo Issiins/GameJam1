@@ -13,7 +13,7 @@ namespace Enviroment
         [SerializeField] private byte numberOfLevels = 3; // Adjust how many levels exists
         [SerializeField] private byte _currentLevel = 1; // Current level scene
         private const string k_sceneName = "LevelScene_";
-        private const string k_mainMenuSceneName = "MainMenu";
+        private const string k_mainMenuSceneName = "MainMenuScene";
         private Coroutine _loadingSceneCoroutine;
         private StringBuilder sb = new();
         public void LoadScene()
@@ -33,6 +33,11 @@ namespace Enviroment
                 return;
             }
             // Loads main menu scene when all levels completed
+            LoadMainMenu();
+        }
+
+        public void LoadMainMenu()
+        {
             _loadingSceneCoroutine = StartCoroutine(LoadSceneAsyncCoroutine(k_mainMenuSceneName));
         }
         private IEnumerator LoadSceneAsyncCoroutine(string sceneName){
