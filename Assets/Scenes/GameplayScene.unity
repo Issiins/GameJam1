@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 235592562}
   - component: {fileID: 235592566}
   - component: {fileID: 235592565}
+  - component: {fileID: 235592567}
   m_Layer: 7
   m_Name: TilemapHazard
   m_TagString: Untagged
@@ -754,6 +755,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &235592567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235592560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321d59ffae214ed6b1192f0eae882f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enviroment.EnviromentDamage
 --- !u!1 &268760541
 GameObject:
   m_ObjectHideFlags: 0
