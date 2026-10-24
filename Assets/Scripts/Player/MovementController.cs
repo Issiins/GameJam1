@@ -24,10 +24,18 @@ namespace Player
             var deltaSpeed = direction.normalized.x > 0 ? _acceleration : _deceleration;
             var targetVelocity = _maxSpeed * direction.normalized.x;
             RidigBody.linearVelocityX = Mathf.MoveTowards(RidigBody.linearVelocityX, targetVelocity, Time.fixedDeltaTime * deltaSpeed);
+            if (direction.x == 0) return;
+            FlipSprite(direction.x);
         }
         public void Jump()
         {
             RidigBody.linearVelocityY = Vector2.up.y * _jumpForce;
+        }
+        private void FlipSprite(float velocity)
+        {
+            var localScale = transform.localScale;
+            float baseScaleX = Mathf.Abs(localScale.x);
+            transform.localScale = new Vector3(baseScaleX*Mathf.Sign(velocity), localScale.y, localScale.z);
         }
     }
 }
