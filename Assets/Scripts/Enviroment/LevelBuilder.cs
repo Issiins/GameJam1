@@ -79,7 +79,7 @@ namespace Enviroment
                 var newObject = Object.Instantiate(prefabToInstantiate, pos, rotation);
                 newObject.transform.localScale = localScale;
                 
-                // Adds objects to the list to place on gameplay scene 
+                // Adds objects to the list to place on gameplay scene
                 gameObjects.Add(newObject); 
             }
             return gameObjects;
