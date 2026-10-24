@@ -10,6 +10,8 @@ namespace Player
         [SerializeField] private InputController _inputController;
         [SerializeField] private float _maxSpeed;
         [SerializeField] private float _jumpForce;
+        [SerializeField] private float _acceleration;
+        [SerializeField] private float _deceleration;
         private Grounded _grounded;
         private Rigidbody2D _rb;
         private Vector2 _direction;
@@ -23,7 +25,12 @@ namespace Player
         private void OnMove(InputAction.CallbackContext ctx)
         {
             _direction = ctx.ReadValue<Vector2>();
-            _rb.linearVelocityX = _direction.x  * _maxSpeed;
+        }
+        private void FixedUpdate()
+        {
+            var deltaSpeed = _direction.normalized.x > 0 ? _acceleration : _deceleration;
+            var targetVelocity = _maxSpeed * _direction.normalized.x;
+            _rb.linearVelocityX = Mathf.MoveTowards(_rb.linearVelocityX, targetVelocity, Time.fixedDeltaTime * deltaSpeed);
         }
 
         private void OnJump(InputAction.CallbackContext ctx)
