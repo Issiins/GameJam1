@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 608005112621188718}
   - component: {fileID: 377903484511623902}
   - component: {fileID: 90364447422379148}
+  - component: {fileID: 2228324049889796765}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -181,7 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f05d0496da24cc2b621873667566f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.MovementController
-  _inputController: {fileID: 0}
   _maxSpeed: 15
   _jumpForce: 5
   _acceleration: 10
@@ -235,3 +235,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793b3fbaabe34c7c99dbf269edae46df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.HealthManager
+--- !u!114 &2228324049889796765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7136013741691550924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358e4b30aa62418792be9de1b37567c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.StateM.PlayerMovementStateMachine
+  _inputController: {fileID: 0}
+  _movementController: {fileID: 608005112621188718}
+  _animator: {fileID: 0}

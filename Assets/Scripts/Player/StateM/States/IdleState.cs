@@ -1,25 +1,29 @@
-﻿namespace Player.States
+﻿using UnityEngine;
+
+namespace Player.States
 {
     public class IdleState : IState
     {
+        private Animator _animator;
+
+        public IdleState(Animator animator)
+        {
+            _animator = animator;
+        }
         public void OnStateEnter()
         {
-            throw new System.NotImplementedException();
         }
 
         public void OnStateExit()
         {
-            throw new System.NotImplementedException();
         }
 
         public void StateUpdate()
         {
-            throw new System.NotImplementedException();
         }
 
         public void StateFixedUpdate()
         {
-            throw new System.NotImplementedException();
         }
     }
 }

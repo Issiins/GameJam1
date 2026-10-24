@@ -10,8 +10,11 @@ namespace Player
     {
         [SerializeField] private InputActionAsset _inputAsset;
         private InputActionMap _inputMap;
-        public InputAction Move { get; private set; }
-        public InputAction Jump { get; private set; }
+        private InputAction _move;
+        private InputAction _jump;
+        public Vector2 Direction { get; private set; }
+        
+        public InputAction JumpAction => _jump;
 
         private void Awake()
         {
@@ -30,18 +33,35 @@ namespace Player
         }
         private void SetInputActions()
         {
-            Move = _inputMap.FindAction("Move");
-            Jump = _inputMap.FindAction("Jump");
+            _move = _inputMap.FindAction("Move");
+            _jump = _inputMap.FindAction("Jump");
         }
 
+        private void EnableActions()
+        {
+            _move.performed += OnMove;
+            _move.canceled += OnMove;
+        }
+
+        private void DisableActions()
+        {
+            _move.performed -= OnMove;
+            _move.canceled -= OnMove;
+        }
         private void OnDisable()
         {
+            DisableActions();
             _inputMap?.Disable();
         }
-
+        
         private void OnEnable()
         {
+            EnableActions();
             _inputMap?.Enable();
+        }
+        private void OnMove(InputAction.CallbackContext ctx)
+        {
+            Direction = ctx.ReadValue<Vector2>();
         }
     }
 }
