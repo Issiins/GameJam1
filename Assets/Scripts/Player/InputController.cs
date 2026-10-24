@@ -63,5 +63,7 @@ namespace Player
         {
             Direction = ctx.ReadValue<Vector2>();
         }
+        public void DisableInputs() => OnDisable();
+        public void EnableInputs() => OnEnable();
     }
 }
