@@ -22,7 +22,7 @@
 ### Goals:
 - Create at least 3 levels;
 - Levels should be created using tilemaps;
-- Level loading should be on the same scene (Level save states)
+- ~~ Level loading should be on the same scene (Level save states) ~~ Voided, for difficulty to creating/loading levels
 - Create a few traps (prefarably one stationary, one projectile);
 - Create 2 art design for each side. (Focus only on one!)
 
