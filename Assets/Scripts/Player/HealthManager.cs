@@ -6,9 +6,11 @@ namespace Player
     public class HealthManager : MonoBehaviour
     {
         public event Action OnDeath;
+        private DeathEvent _deathEvent;
         private bool _deathInvoked;
         private void Awake()
         {
+            _deathEvent  = GetComponent<DeathEvent>();
             OnDeath += Death;
         }
         private void OnDisable()
@@ -25,7 +27,7 @@ namespace Player
         {
             if(_deathInvoked) return;
             _deathInvoked = true;
-            Debug.Log($"{gameObject.name} is dead");
+            _deathEvent.OnDeath();
         }
     }
 }
