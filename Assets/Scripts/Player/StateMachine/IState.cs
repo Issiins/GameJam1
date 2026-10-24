@@ -4,7 +4,7 @@
     {
         public void OnStateEnter();
         public void OnStateExit();
-        public void OnStateUpdate();
-        public void OnStateFixedUpdate();
+        public void StateUpdate();
+        public void StateFixedUpdate();
     }
 }
