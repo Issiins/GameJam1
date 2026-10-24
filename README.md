@@ -26,6 +26,9 @@
 - Create a few traps (prefarably one stationary, one projectile);
 - Create 2 art design for each side. (Focus only on one!)
 
+### Art
+Focus of making it pixel-art
+
 ### Focusing
 First day: Focus on game mechanics
 Second day: Art, SFX, Music (if i will get this)
