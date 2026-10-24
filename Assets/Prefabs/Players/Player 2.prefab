@@ -113,7 +113,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -137,10 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f05d0496da24cc2b621873667566f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.MovementController
-  _maxSpeed: 15
-  _jumpForce: 5
-  _acceleration: 10
-  _deceleration: 10
+  _maxSpeed: 20
+  _jumpForce: 20
+  _acceleration: 30
+  _deceleration: 80
 --- !u!70 &6880356580375034637
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

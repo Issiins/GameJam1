@@ -36,11 +36,13 @@ namespace Player.StateM
 
         private void CheckTransitions()
         {
+            bool isAgainstTheWall = _movementController.IsAgainstTheWall.IsAgainstTheWall();
+            Debug.Log("Is againt the wall" + isAgainstTheWall);
             bool isGrounded = _movementController.Grounded.IsGrounded();
             Vector2 velocity = _movementController.RidigBody.linearVelocity;
             bool hasMoveInput = _inputController.Direction.x != 0f;
             bool jumpPressedThisFrame = _inputController.JumpAction.triggered;
-            if (isGrounded && jumpPressedThisFrame)
+            if ((isGrounded || isAgainstTheWall) && jumpPressedThisFrame)
             {
                 ChangeState(_jumpState);
                 return;

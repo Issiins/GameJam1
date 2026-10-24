@@ -11,12 +11,14 @@ namespace Player
         [SerializeField] private float _jumpForce;
         [SerializeField] private float _acceleration;
         [SerializeField] private float _deceleration;
+        public AgainstTheWall IsAgainstTheWall { get; private set; }
         public Grounded Grounded { get; private set; }
         public Rigidbody2D RidigBody { get; private set; }
         private void Awake()
         {
             RidigBody = GetComponent<Rigidbody2D>();
             Grounded = GetComponentInChildren<Grounded>();
+            IsAgainstTheWall = GetComponentInChildren<AgainstTheWall>();
         }
 
         public void Move(Vector2 direction)
