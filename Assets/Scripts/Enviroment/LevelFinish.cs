@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Enviroment
 {
     [RequireComponent(typeof(Collider2D))]
-    public class LevelFinish : MonoBehaviour
+    public class LevelFinish : Interactable
     {
         [SerializeField] private GameObject _levelFinishPanel;
         [SerializeField] private InputController _inputController;
@@ -18,7 +18,7 @@ namespace Enviroment
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!collision.gameObject.CompareTag("Player")) return;
+            if (!collision.gameObject.CompareTag("Player") || !Status) return;
             if (_levelFinishPanel == null)
             {
                 Debug.LogWarning("Level Finish Panel is missing");

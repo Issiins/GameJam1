@@ -16,6 +16,7 @@ namespace Player
         }
         private void OnDisable()
         {
+            if(_inputController == null) return;
             _inputController.EnableInputs();
         }
     }
