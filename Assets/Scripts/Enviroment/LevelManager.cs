@@ -56,6 +56,7 @@ namespace Enviroment
         }
         private void OnDisable()
         {
+            if(_loadingSceneCoroutine == null) return; 
             StopCoroutine(_loadingSceneCoroutine);
         }
     }

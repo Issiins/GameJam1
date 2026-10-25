@@ -1,25 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using Player;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Enviroment
 {
+    [RequireComponent(typeof(Collider2D))]
     public class EnviromentDamage : MonoBehaviour
     {
-        private Collider2D _col;
-        private void Awake()
-        {
-            _col = GetComponent<Collider2D>();
-            if (_col == null)
-            {
-                Debug.LogWarning("Enviroment has no Collider2D attached");
-            }
-        }
-
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!collision.gameObject.CompareTag("Player")) return;
+            if (!collision.gameObject.CompareTag("Player"))
+            {
+                if(tag.Equals("Projectile"))
+                {
+                    Destroy(gameObject);
+                }
+                return;
+            }
             var healthManager = collision.GetComponent<HealthManager>();
             if (healthManager == null) return;
             healthManager.Kill();
