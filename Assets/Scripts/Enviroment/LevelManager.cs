@@ -22,6 +22,7 @@ namespace Enviroment
             // Builds scene name
             sb.Append(k_sceneName).Append(_currentLevel);
             _loadingSceneCoroutine = StartCoroutine(LoadSceneAsyncCoroutine(sb.ToString()));
+            Time.timeScale = 1f;
         }
 
         public void LoadNextLevel()
