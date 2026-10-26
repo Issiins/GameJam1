@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using DefaultNamespace;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,7 @@ namespace Player.States
         {
             SetAnimatorValues();
             _movementController.Jump();
+            SoundManager.Instance.PlayJumpSound();
         }
 
         public void OnStateExit()

@@ -1,4 +1,5 @@
-﻿using Enviroment;
+﻿using DefaultNamespace;
+using Enviroment;
 using UnityEngine;
 
 namespace Environment
@@ -10,6 +11,7 @@ namespace Environment
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.CompareTag("Player") || _finishDoor == null) return;
+            SoundManager.Instance.PlayButtonClick();
             _finishDoor.Trigger(true);
             _finishDoor.Trigger();
         }

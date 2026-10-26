@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 50395616}
   - component: {fileID: 50395615}
   - component: {fileID: 50395614}
+  - component: {fileID: 50395617}
   m_Layer: 5
   m_Name: BackToMainMenu
   m_TagString: Untagged
@@ -321,6 +322,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50395612}
   m_CullTransparentMesh: 1
+--- !u!114 &50395617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50395612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5713f8e89091456188bed4b17cb22a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.UIButton
 --- !u!1 &68571457
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +696,7 @@ GameObject:
   - component: {fileID: 159574308}
   - component: {fileID: 159574307}
   - component: {fileID: 159574306}
+  - component: {fileID: 159574309}
   m_Layer: 5
   m_Name: BackToMainMenu
   m_TagString: Untagged
@@ -804,6 +818,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159574304}
   m_CullTransparentMesh: 1
+--- !u!114 &159574309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159574304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5713f8e89091456188bed4b17cb22a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.UIButton
 --- !u!1 &163875808
 GameObject:
   m_ObjectHideFlags: 0
@@ -10956,6 +10982,7 @@ GameObject:
   - component: {fileID: 611879047}
   - component: {fileID: 611879046}
   - component: {fileID: 611879045}
+  - component: {fileID: 611879048}
   m_Layer: 5
   m_Name: LevelRest
   m_TagString: Untagged
@@ -11077,6 +11104,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611879043}
   m_CullTransparentMesh: 1
+--- !u!114 &611879048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611879043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5713f8e89091456188bed4b17cb22a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.UIButton
 --- !u!1 &673196523
 GameObject:
   m_ObjectHideFlags: 0
@@ -12143,7 +12182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Reset Level
+  m_text: 'Next Level
 
 '
   m_isRightToLeft: 0
@@ -13121,6 +13160,7 @@ GameObject:
   - component: {fileID: 1227356704}
   - component: {fileID: 1227356703}
   - component: {fileID: 1227356702}
+  - component: {fileID: 1227356705}
   m_Layer: 5
   m_Name: BackToMainMenu
   m_TagString: Untagged
@@ -13242,6 +13282,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227356700}
   m_CullTransparentMesh: 1
+--- !u!114 &1227356705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227356700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5713f8e89091456188bed4b17cb22a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.UIButton
 --- !u!1 &1283884753
 GameObject:
   m_ObjectHideFlags: 0
@@ -13254,6 +13306,7 @@ GameObject:
   - component: {fileID: 1283884757}
   - component: {fileID: 1283884756}
   - component: {fileID: 1283884755}
+  - component: {fileID: 1283884758}
   m_Layer: 5
   m_Name: LevelRest
   m_TagString: Untagged
@@ -13375,6 +13428,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283884753}
   m_CullTransparentMesh: 1
+--- !u!114 &1283884758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283884753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5713f8e89091456188bed4b17cb22a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.UIButton
 --- !u!1 &1314399951
 GameObject:
   m_ObjectHideFlags: 0
@@ -15638,6 +15703,7 @@ GameObject:
   - component: {fileID: 2111566348}
   - component: {fileID: 2111566347}
   - component: {fileID: 2111566346}
+  - component: {fileID: 2111566349}
   m_Layer: 5
   m_Name: LevelRest
   m_TagString: Untagged
@@ -15759,6 +15825,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111566344}
   m_CullTransparentMesh: 1
+--- !u!114 &2111566349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111566344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5713f8e89091456188bed4b17cb22a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.UIButton
 --- !u!1 &2115778340
 GameObject:
   m_ObjectHideFlags: 0
@@ -15926,11 +16004,11 @@ PrefabInstance:
       objectReference: {fileID: 1146083668}
     - target: {fileID: 7457499063833992901, guid: 34afef9899aeb144097135c37fbcbe49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.26
+      value: 22.58
       objectReference: {fileID: 0}
     - target: {fileID: 7457499063833992901, guid: 34afef9899aeb144097135c37fbcbe49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.35
+      value: -8.15
       objectReference: {fileID: 0}
     - target: {fileID: 7457499063833992901, guid: 34afef9899aeb144097135c37fbcbe49, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15983,11 +16061,11 @@ PrefabInstance:
       objectReference: {fileID: 1146083668}
     - target: {fileID: 4754005232671645737, guid: ca00d354e3b24f947810270900afd74d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.34
+      value: -18.96
       objectReference: {fileID: 0}
     - target: {fileID: 4754005232671645737, guid: ca00d354e3b24f947810270900afd74d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.41
+      value: -7.76
       objectReference: {fileID: 0}
     - target: {fileID: 4754005232671645737, guid: ca00d354e3b24f947810270900afd74d, type: 3}
       propertyPath: m_LocalPosition.z

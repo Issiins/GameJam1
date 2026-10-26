@@ -1,4 +1,5 @@
 ﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Player
@@ -26,6 +27,7 @@ namespace Player
         private void Death()
         {
             if(_deathInvoked) return;
+            SoundManager.Instance.PayDeath();
             _deathInvoked = true;
             _deathEvent.OnDeath();
         }
