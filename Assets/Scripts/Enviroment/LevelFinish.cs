@@ -13,7 +13,7 @@ namespace Enviroment
         private SpriteRenderer _spriteRenderer;
         private Color _baseColor;
         private float _cachedTimeScale;
-
+        private bool _isCharacterInTrigger = false;
         private void Awake()
         {
             _cachedTimeScale = Time.timeScale;
@@ -23,15 +23,15 @@ namespace Enviroment
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!collision.gameObject.CompareTag("Player") || !Status) return;
-            if (_levelFinishPanel == null)
-            {
-                Debug.LogWarning("Level Finish Panel is missing");
-                return;
-            }
-            Time.timeScale = 0f;
-            _inputController.DisableInputs();
-            _levelFinishPanel.SetActive(true);
+            if (!collision.gameObject.CompareTag("Player")) return;
+            _isCharacterInTrigger = true;
+            CheckAndTriggeredFinish();
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (!collision.gameObject.CompareTag("Player")) return;
+
+            _isCharacterInTrigger = false;
         }
 
         private void OnDisable()
@@ -42,8 +42,25 @@ namespace Enviroment
 
         public override void Trigger(bool status)
         {
-            base.Trigger();
+            base.Trigger(status);
             _spriteRenderer.color = status ? _finsihedColor : _baseColor;
+            if (status)
+            {
+                CheckAndTriggeredFinish();
+            }
+        }
+
+        private void CheckAndTriggeredFinish()
+        {
+            if (!Status || !_isCharacterInTrigger) return;
+            if (_levelFinishPanel == null)
+            {
+                Debug.LogWarning("Level Finish Panel is missing");
+                return;
+            }
+            Time.timeScale = 0f;
+            _inputController.DisableInputs();
+            _levelFinishPanel.SetActive(true);
         }
     }
 }
