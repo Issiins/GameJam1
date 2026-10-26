@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6808652197620071624}
   - component: {fileID: 3260663077293699002}
   - component: {fileID: 4759498064881921579}
+  - component: {fileID: 3604959749509829076}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -38,6 +39,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1783528449959628370}
+  - {fileID: 7322196348638588268}
   - {fileID: 6131561576113237330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -252,6 +254,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3604959749509829076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759298551330623034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9e6f1354b84b5791cae152b417230b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.Grounded
+  _shootingSpot1: {fileID: 1783528449959628370}
+  _shootingSpot2: {fileID: 7322196348638588268}
+  _raycastDistance: 0.3
 --- !u!1 &3783001499911544899
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +278,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1783528449959628370}
-  - component: {fileID: 3553282587262929085}
   m_Layer: 0
   m_Name: Grounded
   m_TagString: Untagged
@@ -278,25 +294,12 @@ Transform:
   m_GameObject: {fileID: 3783001499911544899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.128, z: 0}
+  m_LocalPosition: {x: 0.09, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7457499063833992901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3553282587262929085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3783001499911544899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a9e6f1354b84b5791cae152b417230b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player.Grounded
-  _raycastDistance: 0.3
 --- !u!1 &4383079284019150446
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,3 +345,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.AgainstTheWall
   _distance: 1
+--- !u!1 &7842508440766345668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7322196348638588268}
+  m_Layer: 0
+  m_Name: Grounded2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7322196348638588268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842508440766345668}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09, y: -0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7457499063833992901}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
