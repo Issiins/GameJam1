@@ -19,6 +19,7 @@ namespace Player.States
 
         public void OnStateEnter()
         {
+            SetAnimatorValues();
             _movementController.Jump();
         }
 
@@ -34,6 +35,12 @@ namespace Player.States
         public void StateFixedUpdate()
         {
             _movementController.Move(_inputController.Direction);
+        }
+        private void SetAnimatorValues()
+        {
+            if(_animator == null) return;
+            _animator.SetBool(AnimatorVariables.Grounded, false);
+            _animator.SetFloat(AnimatorVariables.VelocityY, 1f);
         }
     }
 }

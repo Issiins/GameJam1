@@ -4,6 +4,7 @@ namespace Player.States
 {
     public class MoveState : IState
     {
+        
         InputController _inputController;
         MovementController _movementController;
         Animator _animator;
@@ -15,7 +16,9 @@ namespace Player.States
         }
 
         public void OnStateEnter()
-        { }
+        {
+            SetAnimatorValues();
+        }
 
         public void OnStateExit() { }
 
@@ -27,6 +30,12 @@ namespace Player.States
         public void StateFixedUpdate()
         {
             _movementController.Move(_inputController.Direction);
+        }
+        private void SetAnimatorValues()
+        {
+            if(_animator == null) return;
+            _animator.SetBool(AnimatorVariables.Grounded, true);
+            _animator.SetFloat(AnimatorVariables.VelocityX, 1f);
         }
     }
 }

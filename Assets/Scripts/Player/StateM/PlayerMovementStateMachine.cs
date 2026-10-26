@@ -8,11 +8,16 @@ namespace Player.StateM
     {
         [SerializeField] private InputController _inputController;
         [SerializeField] private MovementController _movementController;
-        [SerializeField] private Animator _animator;
+        private Animator _animator;
         IdleState _idleState;
         MoveState _moveState;
         JumpState _jumpState;
         FallingState _fallingState;
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+        }
 
         private void Start()
         {

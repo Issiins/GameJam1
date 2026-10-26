@@ -13,10 +13,6 @@ namespace Player
             _currentState = newState;
             _currentState.OnStateEnter();
         }
-        protected void Start()
-        {
-            _currentState?.OnStateEnter();
-        }
         protected void Update()
         {
             _currentState?.StateUpdate();
