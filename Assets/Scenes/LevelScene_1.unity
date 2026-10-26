@@ -12274,6 +12274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1146083669}
   - component: {fileID: 1146083668}
+  - component: {fileID: 1146083670}
   m_Layer: 0
   m_Name: InputSystem
   m_TagString: Untagged
@@ -12309,6 +12310,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146083670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146083667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58b20936eed4e5891ab03ee990719db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.GamePausePanel
+  _inputController: {fileID: 1146083668}
+  _pausePanel: {fileID: 114595384}
 --- !u!1 &1155642564
 GameObject:
   m_ObjectHideFlags: 0
@@ -16004,11 +16019,11 @@ PrefabInstance:
       objectReference: {fileID: 1146083668}
     - target: {fileID: 7457499063833992901, guid: 34afef9899aeb144097135c37fbcbe49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.58
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 7457499063833992901, guid: 34afef9899aeb144097135c37fbcbe49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.15
+      value: -8.31
       objectReference: {fileID: 0}
     - target: {fileID: 7457499063833992901, guid: 34afef9899aeb144097135c37fbcbe49, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16061,11 +16076,11 @@ PrefabInstance:
       objectReference: {fileID: 1146083668}
     - target: {fileID: 4754005232671645737, guid: ca00d354e3b24f947810270900afd74d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.96
+      value: -2.78
       objectReference: {fileID: 0}
     - target: {fileID: 4754005232671645737, guid: ca00d354e3b24f947810270900afd74d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.76
+      value: -8.08
       objectReference: {fileID: 0}
     - target: {fileID: 4754005232671645737, guid: ca00d354e3b24f947810270900afd74d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -59,7 +59,8 @@ namespace Enviroment
                 Debug.LogWarning("Level Finish Panel is missing");
                 return;
             }
-            SoundManager.Instance.PlayWinSound();
+            if(SoundManager.Instance != null)
+                SoundManager.Instance.PlayWinSound();
             Time.timeScale = 0f;
             _inputController.DisableInputs();
             _levelFinishPanel.SetActive(true);

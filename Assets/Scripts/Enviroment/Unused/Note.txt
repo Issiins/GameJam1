@@ -1,2 +1,2 @@
-﻿Wanted to make level loading into single scene, however I voided this idea, since it will be difficult to create/edit levels this way. (Or at least, I am not capable to do this, unless just editing JSON files manually)
-But I kept these files for future reference, if I will need it.  
+﻿I wanted to make level loading into single scene, however I voided this idea, since it will be difficult to create/edit levels this way. (Or at least, I am not capable to do this, unless just editing JSON files manually)
+But I kept these files for future reference, if I will need it.

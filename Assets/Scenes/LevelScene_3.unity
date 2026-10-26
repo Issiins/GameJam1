@@ -15160,6 +15160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1146083669}
   - component: {fileID: 1146083668}
+  - component: {fileID: 1146083670}
   m_Layer: 0
   m_Name: InputSystem
   m_TagString: Untagged
@@ -15195,6 +15196,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146083670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146083667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58b20936eed4e5891ab03ee990719db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.GamePausePanel
+  _inputController: {fileID: 1146083668}
+  _pausePanel: {fileID: 1201927260}
 --- !u!1 &1201927260
 GameObject:
   m_ObjectHideFlags: 0
@@ -17375,7 +17390,7 @@ PrefabInstance:
     - target: {fileID: 6808652197620071624, guid: 34afef9899aeb144097135c37fbcbe49, type: 3}
       propertyPath: _deathPanel
       value: 
-      objectReference: {fileID: 1201927260}
+      objectReference: {fileID: 304863180}
     - target: {fileID: 6808652197620071624, guid: 34afef9899aeb144097135c37fbcbe49, type: 3}
       propertyPath: _inputController
       value: 
@@ -17484,7 +17499,7 @@ PrefabInstance:
     - target: {fileID: 8957754926224884490, guid: ca00d354e3b24f947810270900afd74d, type: 3}
       propertyPath: _deathPanel
       value: 
-      objectReference: {fileID: 1201927260}
+      objectReference: {fileID: 304863180}
     - target: {fileID: 8957754926224884490, guid: ca00d354e3b24f947810270900afd74d, type: 3}
       propertyPath: _inputController
       value: 

@@ -22,7 +22,8 @@ namespace Player.States
         {
             SetAnimatorValues();
             _movementController.Jump();
-            SoundManager.Instance.PlayJumpSound();
+            if(SoundManager.Instance != null)
+                SoundManager.Instance.PlayJumpSound();
         }
 
         public void OnStateExit()

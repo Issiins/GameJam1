@@ -27,7 +27,7 @@ namespace DefaultNamespace
         
         public void PlayButtonHover() => PlaySound(_buttonHover);
         public void PlayJumpSound() => PlaySound(_jumpSound);
-        public void PayDeath() => PlaySound(_deathSound);
+        public void PlayDeath() => PlaySound(_deathSound);
         public void PlayButtonClick() => PlaySound(_IGButtonPress);
         public void PlayWinSound() => PlaySound(_levelComplete);
 

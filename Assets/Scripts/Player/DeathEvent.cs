@@ -11,8 +11,8 @@ namespace Player
         public void OnDeath()
         {
             Time.timeScale = 0f;
-            _deathPanel.SetActive(true);
             _inputController.DisableInputs();
+            _deathPanel.SetActive(true);
         }
         private void OnDisable()
         {

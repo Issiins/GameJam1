@@ -27,7 +27,7 @@ namespace Player
         private void Death()
         {
             if(_deathInvoked) return;
-            SoundManager.Instance.PayDeath();
+            if(SoundManager.Instance != null) SoundManager.Instance.PlayDeath();
             _deathInvoked = true;
             _deathEvent.OnDeath();
         }
