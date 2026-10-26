@@ -9,11 +9,16 @@ namespace Enviroment
     {
         [SerializeField] private GameObject _levelFinishPanel;
         [SerializeField] private InputController _inputController;
+        [SerializeField] private Color _finsihedColor;
+        private SpriteRenderer _spriteRenderer;
+        private Color _baseColor;
         private float _cachedTimeScale;
 
         private void Awake()
         {
             _cachedTimeScale = Time.timeScale;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _baseColor = _spriteRenderer.color;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -33,6 +38,12 @@ namespace Enviroment
         {
             _inputController.EnableInputs();
             Time.timeScale = _cachedTimeScale;
+        }
+
+        public override void Trigger(bool status)
+        {
+            base.Trigger();
+            _spriteRenderer.color = status ? _finsihedColor : _baseColor;
         }
     }
 }

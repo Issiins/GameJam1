@@ -7,6 +7,7 @@ namespace Environment
     public class DoorButton : MonoBehaviour
     {
         [SerializeField] private Interactable _finishDoor;
+        [SerializeField] private Color _openColor;
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.CompareTag("Player") || _finishDoor == null) return;
