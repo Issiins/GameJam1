@@ -14,13 +14,13 @@ namespace Player.StateM
         JumpState _jumpState;
         FallingState _fallingState;
 
-        private void Awake()
+        private void Start()
         {
             InitStates();
             _currentState = _idleState;
         }
 
-        private new void Update()
+        protected new void Update()
         {
             base.Update();
             CheckTransitions();
