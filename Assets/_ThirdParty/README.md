@@ -1,1 +1,2 @@
 ﻿# List of third party assets used
+* ## BoldPixel font Asset | [Unity Store](https://api.unity.com/v1/oauth2/authorize?client_id=asset_store_v2&locale=en_US&redirect_uri=https%3A%2F%2Fassetstore.unity.com%2Fauth%2Fcallback%3Fredirect_to%3D%252Fpackages%252F2d%252Ffonts%252Fboldpixels-font-332078&response_type=code&state=0b06aabf-f1fb-4906-b483-661fd4a6f7f4) | [Itch.io](https://yukipixels.itch.io/boldpixels)
