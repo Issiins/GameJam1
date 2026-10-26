@@ -1,50 +1,23 @@
-﻿using System;
+﻿using Enviroment;
 using UnityEngine;
 
-namespace Enviroment
+namespace Environment
 {
     [RequireComponent(typeof(Collider2D))]
     public class DoorButton : MonoBehaviour
     {
         [SerializeField] private Interactable _finishDoor;
-        [SerializeField] private float _deltaPress;
-        [SerializeField] private float _pressingOffset;
-        [SerializeField] private float _deadZone;
-        private Vector3 _basePosition;
-
-        private void Awake()
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            _basePosition = transform.localPosition;
+            if (!other.CompareTag("Player") || _finishDoor == null) return;
+            _finishDoor.Trigger(true);
+            _finishDoor.Trigger();
         }
-
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerExit2D(Collider2D other)
         {
-            if(!other.gameObject.CompareTag("Player")) return;
-            float target = _basePosition.y - _pressingOffset;
-            while (transform.localPosition.y > target)
-            {
-                var levelChange = Mathf.MoveTowards(transform.localPosition.y, target, _deltaPress);
-                transform.localPosition = new Vector3(transform.localPosition.x, levelChange, transform.localPosition.z);
-                if (transform.localPosition.y > _basePosition.y - _deadZone) continue;
-                _finishDoor.Trigger(true);
-                _finishDoor.Trigger();
-                break;
-            }
-        }
-
-        private void OnCollisionExit2D(Collision2D other)
-        {
-            if(!other.gameObject.CompareTag("Player")) return;
-            while (transform.localPosition.y < _basePosition.y)
-            {
-                var levelChange = Mathf.MoveTowards(transform.localPosition.y, _basePosition.y, _deltaPress);
-                transform.localPosition = new Vector3(transform.localPosition.x, levelChange, transform.localPosition.z);
-                if(transform.localPosition.y < _basePosition.y - _deadZone) continue;
-                _finishDoor.Trigger(false);
-                _finishDoor.Trigger();
-                break;
-            }
-            transform.localPosition = _basePosition;
+            if (!other.CompareTag("Player") || _finishDoor == null) return;
+            _finishDoor.Trigger(false);
+            _finishDoor.Trigger();
         }
     }
 }

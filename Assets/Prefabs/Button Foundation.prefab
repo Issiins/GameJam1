@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 508353866090522404}
   - component: {fileID: 3180725395321532074}
   - component: {fileID: 7170938042722381307}
-  - component: {fileID: 2000707483646549111}
-  m_Layer: 0
+  - component: {fileID: 4280518810682493645}
+  m_Layer: 3
   m_Name: Button Foundation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.102, y: -3.933, z: 0}
-  m_LocalScale: {x: 1, y: 0.176, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1602564128457212225}
@@ -84,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.05516826, g: 0.4641509, b: 0, a: 1}
+  m_Sprite: {fileID: -1770675734, guid: db48296a8c13e8c4fa1161cdfb981eac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,8 +122,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &2000707483646549111
-BoxCollider2D:
+--- !u!60 &4280518810682493645
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -160,14 +160,20 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.0666667, y: 1.0666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.0370946, y: -0.5459209}
+      - {x: 1.0537686, y: -0.53470856}
+      - {x: 0.5292459, y: -0.39746168}
+      - {x: -0.24483109, y: -0.39721966}
+      - {x: -0.5415073, y: -0.3954184}
+  m_UseDelaunayMesh: 1
 --- !u!1 &8008251793290824761
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +187,7 @@ GameObject:
   - component: {fileID: 9091207911867273248}
   - component: {fileID: 1006513979713434037}
   - component: {fileID: 1397305608340535440}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,8 +203,8 @@ Transform:
   m_GameObject: {fileID: 8008251793290824761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.58, z: 0}
-  m_LocalScale: {x: 0.47, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.364, z: 0}
+  m_LocalScale: {x: 0.47, y: 0.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 508353866090522404}
@@ -320,7 +326,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -349,6 +355,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enviroment.DoorButton
   _finishDoor: {fileID: 0}
-  _deltaPress: 0.02
-  _pressingOffset: 0.15
-  _deadZone: 0.13

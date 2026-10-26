@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9e6f1354b84b5791cae152b417230b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Grounded
-  _raycastDistance: 0.15
+  _raycastDistance: 0.3
 --- !u!1 &6929106036259181599
 GameObject:
   m_ObjectHideFlags: 0
