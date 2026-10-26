@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4901795187559230304}
   - component: {fileID: 6808652197620071624}
   - component: {fileID: 3260663077293699002}
+  - component: {fileID: 4759498064881921579}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -169,7 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player.StateM.PlayerMovementStateMachine
   _inputController: {fileID: 0}
   _movementController: {fileID: 7921633779470602296}
-  _animator: {fileID: 0}
 --- !u!114 &6808652197620071624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +230,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.19261315, y: 0.30819893}
   m_EdgeRadius: 0
+--- !u!95 &4759498064881921579
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759298551330623034}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01a9f09322bf5214ea161302e746041c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3783001499911544899
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9e6f1354b84b5791cae152b417230b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Grounded
-  _raycastDistance: 0.04
+  _raycastDistance: 0.15
 --- !u!1 &4383079284019150446
 GameObject:
   m_ObjectHideFlags: 0
