@@ -1,4 +1,12 @@
-﻿# Theme: The Other Side
+﻿# Game Jam project
+
+### Game jam: [Solo Development #13](https://itch.io/jam/solo-dev-jam-13)<br>
+### Theme: "The Other Side".
+
+### Third party assets used: <br>
+    BoldPixel font by Yuki Pixels.
+
+Here is brain storm during the event:
 
 ### Ideas:
 - ~~Shadow realm
